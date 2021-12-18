@@ -1,12 +1,12 @@
 function show(){
     if(document.getElementById('mobileHeaderOpen').style.display === 'block'){
         document.getElementById('mobileHeaderOpen').style.display = 'none';
-        document.getElementById('mobileHeader').style.borderBottom = '2px solid black';
     }else{
         document.getElementById('mobileHeaderOpen').style.display = 'block';
         document.getElementById('mobileHeader').style.borderBottom = 'none';
     }
 }
+document.getElementById('mobileHeaderOpen').style.display = 'none';
 
 var database = [{model: 'The AirPoint\'21', difficulty: '4.5'}]
 var color;

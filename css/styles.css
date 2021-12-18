@@ -280,3 +280,87 @@ a{
     margin: 2px;
     transition: 0.5s;
 }
+
+@media only screen and (orientation: portrait){
+    #content{
+        margin-left: 3.5%;
+        margin-right: 3.5%;
+        width: 93%;
+    }
+
+    #darkmode{
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        padding-top: 5%;
+    }
+
+    #darkmodeText{
+        font-size: 4.5vw;
+    }
+    #switchOuter{
+        width: 46px;
+        height: 23px;
+        border-radius: 23px;
+        border: 2px solid black;
+        margin-left: 3vw;
+    }
+    
+    #switchOuter:hover{
+        cursor: pointer;
+    }
+    
+    #switchInner{
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background-color: black;
+        margin: 2px;
+        transition: 0.5s;
+    }
+
+    #title{
+        font-size: 8vw;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    #subtitle{
+        font-size: 4.5vw;
+        margin-left: 0%;
+        margin-right: 0;
+        padding: 0;
+        line-height: 1.5;
+    }
+
+    .sectionTitle{
+        font-size: 6.5vw;
+        margin-top: 13%;
+    }
+
+    .sectionSubtitle{
+        font-size: 4.5vw;
+        line-height: 1.4;
+        margin-bottom: 10%;
+    }
+
+    .flexContainer{
+        flex-direction: column;
+    }
+
+    .indivFlexContainer{
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+        margin-bottom: 7%;
+    }
+
+    #wantToExplore{
+        font-size: 6vw;
+    }
+
+    .exploreLinks{
+        font-size: 5.5vw;
+    }
+}
