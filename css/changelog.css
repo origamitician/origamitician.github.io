@@ -1,0 +1,58 @@
+#title{
+    font-size: 250%;
+    text-align: center;
+}
+
+#subtitle{
+    font-size: 125%;
+    text-align: center;
+}
+
+#changelog{
+    margin-top: 3%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.indivChangeLog{
+    background-color: whitesmoke;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.number, .date, .type, .description{
+    font-size: 125%;
+}
+
+.number{
+    text-align: center;
+    width: 10%;
+}
+
+.date{
+    width: 15%;
+    text-align: center;
+}
+
+.type{
+    width: 20%;
+    padding-left: 3%;
+}
+
+.description{
+    width: 55%;
+}
+
+@media only screen and (orientation: portrait){
+    body{
+        width: 220%;
+    }
+}

@@ -195,6 +195,10 @@ body{
     margin-bottom: -1%;
 }
 
+a{
+    color: white;
+}
+
 @media only screen and (orientation: portrait){
     #mobileHeaderOpen{
         display: none;
