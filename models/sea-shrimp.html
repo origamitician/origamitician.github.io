@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origami website</title>
-    <link rel="stylesheet" href="css/template.css">
-    <link rel="stylesheet" href="css/changelog.css">
+    <link rel="stylesheet" href="css/modeltemplate.css">
+    <link rel="stylesheet" href="css/individualmodel.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 </head>
 <body>
     <!--header-->
-    <div id = 'topmostheader'>This website is currently under construction! All new changes are logged on this <a href="">change log.</a></div>
+    <div id = 'topmostheader'>This website is currently under construction! All new changes are logged on this <a href="https://origamitician.github.io/changelog.html">change log.</a></div>
     
     <div id = 'mobileHeader'>
         <p id = 'menu'>☰</p>
@@ -25,16 +25,16 @@
 
     <div id = 'mobileHeaderOpen'>
         <div class = 'headerLinkHolder'>
-            <a href="about.html" class = 'mobileLinks'>About me</a>
+            <a href="https://origamitician.github.io/about.html" class = 'mobileLinks'>About me</a>
         </div>
         <div class = 'headerLinkHolder'>
             <a href="/models" class = 'mobileLinks'>Models</a>
         </div>
         <div class = 'headerLinkHolder'>
-            <a href="basicfolds.html" class = 'mobileLinks'>Basic folds</a>
+            <a href="https://origamitician.github.io/basicfolds.html" class = 'mobileLinks'>Basic folds</a>
         </div>
         <div class = 'headerLinkHolder'>
-            <a href="gallery.html" class = 'mobileLinks'>Gallery</a>
+            <a href="https://origamitician.github.io/gallery.html" class = 'mobileLinks'>Gallery</a>
         </div>
     </div>
     
@@ -42,19 +42,36 @@
 
         <a href="/" id = 'iconpc'>The Origamitician</a>
         <div id = 'innerNavigation'>
-            <a href="about.html" class = 'links'>About me</a>
+            <a href="https://origamitician.github.io/about.html" class = 'links'>About me</a>
             <a href="/models" class = 'links'>Models</a>
-            <a href="basicfolds.html" class = 'links'>Basic folds</a>
-            <a href="gallery.html" class = 'links'>Gallery</a>
+            <a href="https://origamitician.github.io/basicfolds.html" class = 'links'>Basic folds</a>
+            <a href="https://origamitician.github.io/gallery.html" class = 'links'>Gallery</a>
         </div>
     </div>
 
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-    <p id = 'title'>Change Log</p>
-    <p id = 'subtitle'>This site was last updated on: 12/29/21</p>
-    <div id = 'changelog'></div>
-    
+    <div id = 'topWebsite'></div>
+    <div id = 'instructionSection'>
+        <p id = 'instructions'>Instructions</p>
+        <div id = 'between'></div>
+        <div id = 'darkmode'>
+            <p id = 'darkmodeText'>Dark mode for instructions: </p>
+            <div id = 'switchOuter'>
+                <div id = 'switchInner'></div>
+            </div>
+        </div>
+        <div id = 'slider'>
+            <p id = 'sliderText'>Zoom (50%): </p>
+            <input type="range" min="25", max="100", value="50", id = "range">
+        </div>
+    </div>
+    <div id = 'gallerySection'>
+        <p id = 'gallery'>Gallery</p>
+    </div>
+    <div id = 'relatedSection'>
+        <p id = 'similarModels'>Similar Models</p>
+    </div>
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -80,16 +97,21 @@
 
         <p class = 'bottomheaders'>Quick Links</p>
         <div id = 'bottomLinkHolder'>
-            <div class = 'indivBottomLinkHolder'><a href="about.html#website" class = 'bottomlink'>About this website ▶</a></div>
+            <div class = 'indivBottomLinkHolder'><a href="https://origamitician.github.io/about.html#website" class = 'bottomlink'>About this website ▶</a></div>
             <div class = 'indivBottomLinkHolder'><a href="/models" class = 'bottomlink'>Models ▶</a></div>
-            <div class = 'indivBottomLinkHolder'><a href="gallery.html" class = 'bottomlink'>Gallery ▶</a></div>
-            <div class = 'indivBottomLinkHolder'><a href="usage.html" class = 'bottomlink'>Terms of use ▶</a></div>
+            <div class = 'indivBottomLinkHolder'><a href="https://origamitician.github.io/gallery.html" class = 'bottomlink'>Gallery ▶</a></div>
+            <div class = 'indivBottomLinkHolder'><a href="https://origamitician.github.io/usage.html" class = 'bottomlink'>Terms of use ▶</a></div>
             
         </div>  
     </footer>
     <div id = 'credit'>&copy 2021 The Origamitician. <span id = 'code'>&lt;/&gt;</span> by <a href="/about-me" >Micaiah Cape</a></div>
     
 </body>
-<script src="js/app.js"></script>
-<script src='js/changelog.js'></script>
+
+<script src='js/subpagecreator.js'></script>
+<script src="js/modeltemplate.js"></script>
+<script src="js/listofsubpages.js"></script>
+<script>
+    createSubPage(0, [1]);
+</script>
 </html>

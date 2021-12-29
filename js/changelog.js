@@ -1,8 +1,15 @@
-var changeLog = [{date: 'Date', type: 'Type of change', description: 'Description'}, 
-{date: '12/24/21', type: 'New subpage', description: 'Official change log established'}, 
-{date: '12/17/21', type: 'Code', description: 'Homepage now mobile compatible'},
-{date: '12/9/21', type: 'New subpage', description: 'Homepage created. Most of the code was from https://pitchk.github.io/h, my old website. Not mobile compatible yet'},
-{date: '12/9/21', type: 'N/A', description: 'Initial commit on GitHub'}];
+var changeLog = [{date: 'Date', description: 'Description', link: 0, linkDisplay: 0}, 
+{date: '12/29/21', description: 'Updated first subpage - sea shrimp', link: 'https://origamitician.github.io/models/sea-shrimp.html', linkDisplay: 'sea-shrimp.html'}, 
+
+{date: '12/27/21', description: 'Subpage generator finished', link: 'https://origamitician.github.io/models/js/subpagecreator.js', linkDisplay: 'subpagecreator.js'}, 
+
+{date: '12/24/21', description: 'Official change log established', link: 0, linkDisplay: 0}, 
+
+{date: '12/17/21', description: 'Homepage now mobile compatible', link: "https://origamitician.github.io", linkDisplay: 'origamitician.github.io'},
+
+{date: '12/9/21', description: 'Homepage created. Most of the code was from https://pitchk.github.io/h, my old website. Not mobile compatible yet', link: "https://origamitician.github.io", linkDisplay: 'origamitician.github.io'},
+
+{date: '12/9/21', description: 'Initial commit on GitHub', link: 0, linkDisplay: 0}];
 
 for (var i = 0; i < changeLog.length; i++){
     var flex = document.createElement('div');
@@ -33,18 +40,7 @@ for (var i = 0; i < changeLog.length; i++){
         d.style.fontSize = '125%';
     }
     document.getElementsByClassName('indivChangeLog')[i].appendChild(d);
-
-    var p = document.createElement('p');
-    p.className = 'type';
-    p.innerHTML = changeLog[i].type;
-    if(i == 0){
-        p.style.fontSize = '130%';
-        p.style.fontWeight = 'bold';
-    }else{
-        p.style.fontSize = '125%';
-    }
-    document.getElementsByClassName('indivChangeLog')[i].appendChild(p);
-
+    
     var a = document.createElement('p');
     a.className = 'description';
     a.innerHTML = changeLog[i].description;
@@ -55,4 +51,23 @@ for (var i = 0; i < changeLog.length; i++){
         a.style.fontSize = '125%';
     }
     document.getElementsByClassName('indivChangeLog')[i].appendChild(a);
+    if(i == 0){
+        var li = document.createElement('p');
+        li.id = 'headerLink';
+        li.innerHTML = 'Links (if applicable)';
+        li.style.fontSize = '130%';
+        document.getElementsByClassName('indivChangeLog')[i].appendChild(li);
+    }else{
+        if(changeLog[i].link != 0){
+            var l = document.createElement('a');
+            l.className = 'relevantLink';
+            l.setAttribute('href', changeLog[i].link);
+            l.setAttribute('target', '_blank');
+            l.appendChild(document.createTextNode(changeLog[i].linkDisplay));
+            l.style.fontSize = '125%';
+            document.getElementsByClassName('indivChangeLog')[i].appendChild(l);
+        }
+    }
+    
+    
 }

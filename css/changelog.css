@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+html{
+    word-wrap: break-word;
+}
+
 #subtitle{
     font-size: 125%;
     text-align: center;
@@ -42,13 +46,21 @@
     text-align: center;
 }
 
-.type{
-    width: 20%;
-    padding-left: 3%;
-}
 
 .description{
-    width: 55%;
+    width: 50%;
+}
+
+#headerLink{
+    font-weight: bold;
+}
+
+.relevantLink{
+    color: #ff9100;
+    font-size: 125%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 @media only screen and (orientation: portrait){

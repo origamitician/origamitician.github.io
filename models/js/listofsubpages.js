@@ -1,0 +1,8 @@
+//list of detailed subpages
+
+var detailedSubpages = [
+    {pageName: 'Sea Shrimp', webLink: 'sea-shrimp.html', shortDescription: 'A small shrimp, complete with two front claws and its distinguishable flexible tail.', detailedDescription: 'This is one of the more recent models that I came up with. Featuring two front claws and a flexible tail, this shrimp is intricate yet easy to fold. This is a model that was sort of inspired by the Attacker Fish model.', difficulty: 5.5, time: '10-14 min', image: 'https://pitchk.github.io/h/shrimp.jpg', instructions: 'https://pitchk.github.io/sea-shrimp/shrimp.svg', download: 'https://pitchk.github.io/sea-shrimp/shrimp.pdf', images: [{url: 'https://pitchk.github.io/sea-shrimp/shrimptop.jpg', caption: 'Top View.'}, {url: 'https://pitchk.github.io/sea-shrimp/twoshrimp.jpg', caption: 'Two shrimp, side by side.'}]},
+
+    {pageName: 'Attacker Fish', webLink: 'attacker-fish.html', shortDescription: '(No description provided)', detailedDescription: 'This model inspired the Sea Shrimp. If this fish were to appear in real life, it would feature two fins in the back to propel it through the water quickly, while having two claws in the front to capture anything that swims past it.', difficulty: 6.5, time: '12-20 min', image: 'https://pitchk.github.io/attacker-fish/attackerfish.jpg', instructions: 'https://pitchk.github.io/attacker-fish/attackerfish.svg', download: 'https://pitchk.github.io/attacker-fish/attackerfish.pdf', images: [{url: 'https://pitchk.github.io/sea-shrimp/shrimptop.jpg', caption: 'Top View.'}, {url: 'https://pitchk.github.io/sea-shrimp/twoshrimp.jpg', caption: 'Two shrimp, side by side.'}]}
+];
+

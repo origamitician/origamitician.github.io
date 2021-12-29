@@ -1,16 +1,4 @@
-function show(){
-    if(document.getElementById('mobileHeaderOpen').style.display === 'block'){
-        document.getElementById('mobileHeaderOpen').style.display = 'none';
-    }else{
-        document.getElementById('mobileHeaderOpen').style.display = 'block';
-        document.getElementById('mobileHeader').style.borderBottom = 'none';
-    }
-}
-document.getElementById('mobileHeaderOpen').style.display = 'none';
-
-var database = [{model: 'The AirPoint\'21', difficulty: '4.5'}]
 var color;
-document.getElementById('menu').addEventListener('click', show);
 var listOfDifficulties = [5.5, 7.5, 5, 8.5, 7, 4.5];
 for (var i = 0; i < document.getElementsByClassName('difficultyVisual').length; i++){
     if(listOfDifficulties[i] <= 4){
