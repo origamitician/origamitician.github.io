@@ -198,7 +198,7 @@ function createSubPage(number, list){
     var final = document.createElement('a');
     final.id = 'exploreMore';
     var innerAdding = document.createTextNode('Explore all models');
-    final.setAttribute('href', "/");
+    final.setAttribute('href', "/models");
     final.setAttribute('target', '_blank');
     final.appendChild(innerAdding);
     document.getElementById('relatedSection').appendChild(final);
