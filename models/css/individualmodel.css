@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 #pictureAndExplanation{
     display: flex;
     background-color: #5e5d5c;
@@ -320,3 +324,207 @@
     margin-left: 40%;
     margin-right: 40%;
 }
+
+#line{
+    display: none;
+}
+
+@media only screen and (orientation: portrait){
+    #pictureAndExplanation{
+        flex-direction: column;
+    }
+
+    #topImg{
+        width: 100%;
+    }
+
+    #explanation{
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        padding-bottom: 7%;
+    }
+
+    #title, #titleFlexMain, #description{
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    #titleFlexMain{
+        flex-direction: column;
+        font-size: 5.5vw;
+    }
+
+    #titleFlexInner{
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #title{
+        font-size: 7.5vw;
+        text-align: center;
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+
+    #time{
+        text-align: center;
+    }
+
+    #difficultyDisplay{
+        width: 60%;
+        padding-top: 0.3%;
+        padding-bottom: 0.3%;
+    }
+
+    #description{
+        font-size: 4.75vw;
+       
+    }
+
+    #line{
+        display: block;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5%;
+        margin-bottom: 6.5%;
+    }
+
+    .explanationLinks{
+        float: left;
+        font-size: 4.74vw;
+    
+        margin-left: 5%;
+        margin-right: 3%;
+    }
+
+    #instructions{
+        padding-top: 6%;
+        margin-bottom: 6%;
+    }
+
+    .pdftitle{
+        font-size: 4.5vw;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #darkmodeText, #sliderText{
+        font-size: 4.5vw;
+    }
+
+    #switchOuter{
+        margin-left: 2.5%;
+    }
+
+    #darkmode, #slider{
+        justify-content: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #range{
+        width: 50%;
+        margin-left: 2.5%;
+    }
+
+    #slider{
+        margin-bottom: 10%;
+        display: none;
+        
+    }
+
+    #darkmode{
+        margin-bottom: 2.5%;
+    }
+
+    #instructionImage{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .indivGalleryImage{
+        float: none;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 13%;
+    }
+
+    .caption{
+        margin-top: 4%;
+    }
+    
+    .outer{
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .relatedImg{
+        width: 100%;
+    }
+
+    .innerDiv{
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 94%;
+        
+    }
+
+    .modelTitle{
+        display: block;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        text-align: center;
+    }
+
+    .modelSubtitle{
+        font-size: 5vw;
+        margin-bottom: 8%;
+        height: auto;
+        text-align: center;
+    }
+
+    .difficultyDiv{
+        margin-left: 0;
+        margin-bottom: 5%;
+    }
+
+    .time{
+        text-align: center;
+    }
+
+    .innerDifficultyDiv{
+        justify-content: center;
+    }
+
+    .difficultyDisplay2{
+        width: 60%;
+        text-align: left;
+        padding-left: 3%;
+    }
+
+    #instructions, #gallery, #similarModels{
+        color: orange;
+        border-bottom: 5px solid orange;
+        padding-bottom: 4%;
+        font-size: 10vw;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #exploreMore{
+        font-size: 5vw;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
+

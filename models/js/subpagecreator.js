@@ -1,3 +1,17 @@
+var devOrientation = '';
+//decide whether navigation bar will show right or left arrow; make mobile compatible
+function decideLorR(x){
+    if(x.matches){
+        devOrientation = 'portrait';
+    }else{
+        devOrientation = 'landscape';
+    }
+}
+
+var x = window.matchMedia("(orientation: portrait)");
+decideLorR(x);
+x.addListener(decideLorR);
+
 function createSubPage(number, list){
     var pe = document.createElement('div');
     pe.id = 'pictureAndExplanation';
@@ -41,7 +55,7 @@ function createSubPage(number, list){
     document.getElementById('titleFlexInner').appendChild(d1);
     var color;
     if(detailedSubpages[number].difficulty <= 4){
-        color = 'green';
+        color = '#0acf06';
     }else if (detailedSubpages[number].difficulty > 4 && detailedSubpages[number].difficulty <= 6){
         color = '#42aaf5';
     }else if (detailedSubpages[number].difficulty > 6 && detailedSubpages[number].difficulty <= 7.5){
@@ -51,6 +65,10 @@ function createSubPage(number, list){
     }
     document.getElementById('difficultyDisplay').style.background = 'linear-gradient(to right, ' + color + ' 0%, ' + color + ' ' + detailedSubpages[number].difficulty*10 + '%, lightgrey ' + detailedSubpages[number].difficulty*10 +'%, lightgrey 100%)';
 
+    var line = document.createElement('hr');
+    line.id = 'line';
+    document.getElementById('explanation').appendChild(line);
+
     var description = document.createElement('p');
     description.id = 'description';
     description.innerHTML = detailedSubpages[number].detailedDescription;
@@ -58,17 +76,36 @@ function createSubPage(number, list){
 
     //3 links
 
+    function scrollInstructions(){
+        document.getElementById('instructionSection').scrollIntoView()
+    }
+
+    function scrollGallery(){
+        document.getElementById('gallerySection').scrollIntoView()
+    }
+
+    function scrollRelated(){
+        document.getElementById('relatedSection').scrollIntoView()
+    }
+
+
     var a = document.createElement('p');
     a.className = 'explanationLinks';
     a.innerHTML = 'Instructions';
+    a.addEventListener('click', scrollInstructions);
     document.getElementById('explanation').appendChild(a);
+    
+
     var b = document.createElement('p');
     b.className = 'explanationLinks';
     b.innerHTML = 'Gallery';
+    b.addEventListener('click', scrollGallery);
     document.getElementById('explanation').appendChild(b);
+
     var c = document.createElement('p');
     c.className = 'explanationLinks';
     c.innerHTML = 'Similar models';
+    c.addEventListener('click', scrollRelated);
     document.getElementById('explanation').appendChild(c);
 
     //instructions
@@ -120,13 +157,16 @@ function createSubPage(number, list){
         caption.innerHTML = detailedSubpages[number].images[i].caption;
         document.getElementsByClassName('indivGalleryImage')[i].appendChild(caption);
 
-        if (i % 2 == 0){
-            document.getElementsByClassName('indivGalleryImage')[i].style.marginLeft = '15%';
-            document.getElementsByClassName('indivGalleryImage')[i].style.marginRight = '5%';
-        }else{
-            document.getElementsByClassName('indivGalleryImage')[i].style.marginLeft = '5%';
-            document.getElementsByClassName('indivGalleryImage')[i].style.marginRight = '15%';
+        if(devOrientation == 'landscape'){
+            if (i % 2 == 0){
+                document.getElementsByClassName('indivGalleryImage')[i].style.marginLeft = '15%';
+                document.getElementsByClassName('indivGalleryImage')[i].style.marginRight = '5%';
+            }else{
+                document.getElementsByClassName('indivGalleryImage')[i].style.marginLeft = '5%';
+                document.getElementsByClassName('indivGalleryImage')[i].style.marginRight = '15%';
+            }
         }
+        
     }
 
     //similar models
@@ -184,7 +224,7 @@ function createSubPage(number, list){
 
     for (var i = 0; i < document.getElementsByClassName('difficultyDisplay2').length; i++){
         if(detailedSubpages[list[i]].difficulty <= 4){
-            color = 'green';
+            color = '#0acf06';
         }else if (detailedSubpages[list[i]].difficulty > 4 && detailedSubpages[list[i]].difficulty <= 6){
             color = '#42aaf5';
         }else if (detailedSubpages[list[i]].difficulty > 6 && detailedSubpages[list[i]].difficulty <= 7.5){
@@ -203,8 +243,16 @@ function createSubPage(number, list){
     final.appendChild(innerAdding);
     document.getElementById('relatedSection').appendChild(final);
 
-    document.getElementById('gallerySection').style.marginBottom = (Math.ceil(detailedSubpages[number].images.length / 2)*33) + "%";
-
-    document.getElementsByClassName('pdftitle')[1].style.fontSize = '165%';
+    if(devOrientation == 'landscape'){
+        document.getElementsByClassName('pdftitle')[1].style.fontSize = '165%';
+        document.getElementById('gallerySection').style.marginBottom = (Math.ceil(detailedSubpages[number].images.length / 2)*33) + "%";
+    }else{
+        document.getElementsByClassName('pdftitle')[1].style.fontSize = '4.5vw';
+        document.getElementById('gallerySection').style.marginBottom = "5%";
+    }
+    
     
 }
+
+
+

@@ -12,3 +12,16 @@ for (var i = 0; i < document.getElementsByClassName('difficultyVisual').length; 
     }
     document.getElementsByClassName('difficultyVisual')[i].style.background = 'linear-gradient(to right, ' + color + ' 0%, ' + color + ' ' + listOfDifficulties[i]*10 + '%, lightgrey ' + listOfDifficulties[i]*10 +'%, lightgrey 100%)';
 }
+
+function show(){
+    console.log('test');
+    if(document.getElementById('mobileHeaderOpen').style.display === 'block'){
+        document.getElementById('mobileHeaderOpen').style.display = 'none';
+        document.getElementById('mobileHeader').style.borderBottom = 'none';
+    }else{
+        document.getElementById('mobileHeaderOpen').style.display = 'block';
+        
+    }
+}
+
+document.getElementById('menu').addEventListener('click', show);

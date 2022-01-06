@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origami website</title>
+    <link rel="stylesheet" href="css/modeltemplate.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<meta name="description" content="This website showcases my original origami models. I come up with a lot of models, ranging from futuristic vehicles to flowers. Have a look!"/>
+</head>
+<body>
+    <!--header-->
+    <div id = 'topmostheader'>This website is currently under construction! All new changes are logged on this <a href="https://origamitician.github.io/changelog.html">change log.</a></div>
+    
+    <div id = 'mobileHeader'>
+        <p id = 'menu'>☰</p>
+        <a href="/" id = 'icon'>The Origamitician</a>
+    </div>
+
+    <div id = 'mobileHeaderOpen'>
+        <div class = 'headerLinkHolder'>
+            <a href="https://origamitician.github.io/about.html" class = 'mobileLinks'>About me</a>
+        </div>
+        <div class = 'headerLinkHolder'>
+            <a href="/models" class = 'mobileLinks'>Models</a>
+        </div>
+        <div class = 'headerLinkHolder'>
+            <a href="https://origamitician.github.io/basicfolds.html" class = 'mobileLinks'>Basic folds</a>
+        </div>
+        <div class = 'headerLinkHolder'>
+            <a href="https://origamitician.github.io/gallery.html" class = 'mobileLinks'>Gallery</a>
+        </div>
+    </div>
+    
+    <div id = 'header'>
+
+        <a href="/" id = 'iconpc'>The Origamitician</a>
+        <div id = 'innerNavigation'>
+            <a href="https://origamitician.github.io/about.html" class = 'links'>About me</a>
+            <a href="/models" class = 'links'>Models</a>
+            <a href="https://origamitician.github.io/basicfolds.html" class = 'links'>Basic folds</a>
+            <a href="https://origamitician.github.io/gallery.html" class = 'links'>Gallery</a>
+        </div>
+    </div>
+
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <p id = 'title'>All models</p>
+    <div id = 'allModels'></div>
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+    </div>
+    <footer id = 'bottom'>
+        <div id = 'bottomIconHolder'>
+            <a href="" id = 'bottomIcon'>The Origamitician</a>
+        </div>
+        
+        <p id = 'bottomCaption'>This website is updated every time I come up with a new model. Stay tuned and visit back frequently to check for any new updates! All new updates are logged onto this <a href="changelog.html">change log.</a></p>
+
+        <div id = 'footerflex'>
+            <div id = 'left'>
+            <p class = 'topbottomheaders'>Contact</p>
+            <p id = 'email'>My email: <a href="mailto:mchlcape808@gmail.com" id = 'mchl'>mchlcape808@gmail.com</a></p>
+            </div>
+            <div id = 'right'>
+                <p class = 'topbottomheaders'>Source Code</p>
+                <p id = 'sourcecode'>This website is open source on <a href="https://github.com/origamitician/origamitician.github.io">GitHub!</a></p>
+            </div>
+        </div>
+        
+
+        <p class = 'bottomheaders'>Quick Links</p>
+        <div id = 'bottomLinkHolder'>
+            <div class = 'indivBottomLinkHolder'><a href="https://origamitician.github.io/about.html#website" class = 'bottomlink'>About this website ▶</a></div>
+            <div class = 'indivBottomLinkHolder'><a href="/models" class = 'bottomlink'>Models ▶</a></div>
+            <div class = 'indivBottomLinkHolder'><a href="https://origamitician.github.io/gallery.html" class = 'bottomlink'>Gallery ▶</a></div>
+            <div class = 'indivBottomLinkHolder'><a href="https://origamitician.github.io/usage.html" class = 'bottomlink'>Terms of use ▶</a></div>
+            
+        </div>  
+    </footer>
+    <div id = 'credit'>&copy 2021 The Origamitician. <span id = 'code'>&lt;/&gt;</span> by <a href="/about-me" >Micaiah Cape</a></div>
+    
+</body>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/listofsubpages.js"></script>
+<script>
+    
+
+//list of detailed subpages
+
+for (var i = 0; i < detailedSubpages.length; i++){
+    var d = document.createElement('div');
+    d.className = 'outer';
+    document.getElementById('allModels').appendChild(d);
+
+    var img = document.createElement('img');
+    img.className = 'relatedImg';
+    img.setAttribute('src', detailedSubpages[i].image);
+    document.getElementsByClassName('outer')[i].appendChild(img);
+    
+    var innerDiv = document.createElement('div');
+    innerDiv.className = 'innerDiv';
+    document.getElementsByClassName('outer')[i].appendChild(innerDiv);
+
+    var title = document.createElement('a');
+    title.className = 'modelTitle';
+    var innerLink = document.createTextNode(detailedSubpages[i].pageName)
+    title.setAttribute('href', detailedSubpages[i].webLink);
+    title.setAttribute('target', '_blank');
+    title.appendChild(innerLink);
+    document.getElementsByClassName('innerDiv')[i].appendChild(title);
+
+    var subtitle = document.createElement('p');
+    subtitle.className = 'modelSubtitle';
+    subtitle.innerHTML = detailedSubpages[i].shortDescription;
+    document.getElementsByClassName('innerDiv')[i].appendChild(subtitle);
+
+    //difficulty display
+    var difficulty = document.createElement('div');
+    difficulty.className = 'difficultyDiv';
+    document.getElementsByClassName('innerDiv')[i].appendChild(difficulty);
+
+    var time = document.createElement('p');
+    time.className = 'time';
+    time.innerHTML = '⏱️ Estimated time: ' + detailedSubpages[i].time;
+    document.getElementsByClassName('difficultyDiv')[i].appendChild(time);
+
+    var difficulty2 = document.createElement('div');
+    difficulty2.className = 'innerDifficultyDiv';
+    document.getElementsByClassName('difficultyDiv')[i].appendChild(difficulty2);
+
+    var word = document.createElement('p');
+    word.className = 'difficultyWord';
+    word.innerHTML = 'Difficulty: ';
+    document.getElementsByClassName('innerDifficultyDiv')[i].appendChild(word);
+
+    var num = document.createElement('p');
+    num.className = 'difficultyDisplay2';
+    num.innerHTML = detailedSubpages[i].difficulty + '/10';
+    document.getElementsByClassName('innerDifficultyDiv')[i].appendChild(num);
+}
+
+for (var i = 0; i < document.getElementsByClassName('difficultyDisplay2').length; i++){
+    if(detailedSubpages[i].difficulty <= 4){
+        color = '#0acf06';
+    }else if (detailedSubpages[i].difficulty > 4 && detailedSubpages[i].difficulty <= 6){
+        color = '#42aaf5';
+    }else if (detailedSubpages[i].difficulty > 6 && detailedSubpages[i].difficulty <= 7.5){
+        color = '#e89a2c';
+    }else{
+        color = '#f05d35';
+    }
+    document.getElementsByClassName('difficultyDisplay2')[i].style.background = 'linear-gradient(to right, ' + color + ' 0%, ' + color + ' ' + detailedSubpages[i].difficulty*10 + '%, lightgrey ' + detailedSubpages[i].difficulty*10 +'%, lightgrey 100%)';
+}
+</script>
+
+
+</html>

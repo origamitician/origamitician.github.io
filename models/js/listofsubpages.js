@@ -10,3 +10,4 @@ var detailedSubpages = [
     {pageName: 'A simple plant (ver. 1)', webLink: 'plant1.html', shortDescription: '(No description provided)', detailedDescription: 'One of my easiest models! This plant stands on four \'legs\' and has a sharp point that is elevated in the center. It has four leaves (or petals, whichever way you may want to view it as!) This model inspired both Version 1 and Version 2.', difficulty: 3, time: '7-12 min', image: 'https://pitchk.github.io/plant-1/plant1.jpg', instructions: 'https://pitchk.github.io/plant-1/flower1.svg', images: [{url: 'https://pitchk.github.io/sea-shrimp/shrimptop.jpg', caption: 'Top View.'}, {url: 'https://pitchk.github.io/sea-shrimp/twoshrimp.jpg', caption: 'Two shrimp, side by side.'}]}
 ];
 
+

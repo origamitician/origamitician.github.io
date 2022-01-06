@@ -1,4 +1,9 @@
 var changeLog = [{date: 'Date', description: 'Description', link: 0, linkDisplay: 0}, 
+{date: '1/5/22', description: 'Huge bug fixes - subpages now mobile compatible', link: 0, linkDisplay: 0}, 
+{date: '1/5/22', description: 'Added "models" page; displays all models and updates accordingly to any new changes in listOfSubpages.js. ', link: 'https://origamitician.github.io/models/', linkDisplay: '/models'}, 
+{date: '1/5/22', description: 'Added fourth subpage "Robot"', link: 'https://origamitician.github.io/models/simple-robot.html', linkDisplay: 'simple-robot.html'}, 
+{date: '1/5/22', description: 'Updated third subpage "A simple plant (ver. 1)"', link: 'https://origamitician.github.io/models/plant1.html', linkDisplay: 'plant1.html'}, 
+{date: '1/5/22', description: 'Updated second subpage "Attacker Fish"', link: 'https://origamitician.github.io/models/attacker-fish.html', linkDisplay: 'attacker-fish.html'}, 
 {date: '12/29/21', description: 'Updated first subpage - sea shrimp', link: 'https://origamitician.github.io/models/sea-shrimp.html', linkDisplay: 'sea-shrimp.html'}, 
 
 {date: '12/27/21', description: 'Subpage generator finished', link: 'https://origamitician.github.io/models/js/subpagecreator.js', linkDisplay: 'subpagecreator.js'}, 
