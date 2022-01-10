@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origami website</title>
     <link rel="stylesheet" href="css/modeltemplate.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/individualmodel.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,8 +52,27 @@
 
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-    <p id = 'title'>All models</p>
-    <div id = 'allModels'></div>
+    <div id = 'topWebsite'></div>
+    <div id = 'instructionSection'>
+        <p id = 'instructions'>Instructions</p>
+        <div id = 'between'></div>
+        <div id = 'darkmode'>
+            <p id = 'darkmodeText'>Dark mode for instructions: </p>
+            <div id = 'switchOuter'>
+                <div id = 'switchInner'></div>
+            </div>
+        </div>
+        <div id = 'slider'>
+            <p id = 'sliderText'>Zoom (50%): </p>
+            <input type="range" min="25", max="100", value="50", id = "range">
+        </div>
+    </div>
+    <div id = 'gallerySection'>
+        <p id = 'gallery'>Gallery</p>
+    </div>
+    <div id = 'relatedSection'>
+        <p id = 'similarModels'>Similar Models</p>
+    </div>
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -89,78 +108,11 @@
     <div id = 'credit'>&copy 2021 The Origamitician. <span id = 'code'>&lt;/&gt;</span> by <a href="/about-me" >Micaiah Cape</a></div>
     
 </body>
-<script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/listofsubpages.js"></script>
+
+<script src='js/subpagecreator.js'></script>
+<script src="js/modeltemplate.js"></script>
+<script src="js/listofsubpages.js"></script>
 <script>
-    
-
-//list of detailed subpages
-
-for (var i = 0; i < detailedSubpages.length; i++){
-    var d = document.createElement('div');
-    d.className = 'outer';
-    document.getElementById('allModels').appendChild(d);
-
-    var img = document.createElement('img');
-    img.className = 'relatedImg';
-    img.setAttribute('src', detailedSubpages[i].image);
-    document.getElementsByClassName('outer')[i].appendChild(img);
-    
-    var innerDiv = document.createElement('div');
-    innerDiv.className = 'innerDiv';
-    document.getElementsByClassName('outer')[i].appendChild(innerDiv);
-
-    var title = document.createElement('a');
-    title.className = 'modelTitle';
-    var innerLink = document.createTextNode(detailedSubpages[i].pageName)
-    title.setAttribute('href', detailedSubpages[i].webLink);
-    title.setAttribute('target', '_blank');
-    title.appendChild(innerLink);
-    document.getElementsByClassName('innerDiv')[i].appendChild(title);
-
-    var subtitle = document.createElement('p');
-    subtitle.className = 'modelSubtitle';
-    subtitle.innerHTML = detailedSubpages[i].shortDescription;
-    document.getElementsByClassName('innerDiv')[i].appendChild(subtitle);
-
-    //difficulty display
-    var difficulty = document.createElement('div');
-    difficulty.className = 'difficultyDiv';
-    document.getElementsByClassName('innerDiv')[i].appendChild(difficulty);
-
-    var time = document.createElement('p');
-    time.className = 'time';
-    time.innerHTML = '⏱️ Estimated time: ' + detailedSubpages[i].time;
-    document.getElementsByClassName('difficultyDiv')[i].appendChild(time);
-
-    var difficulty2 = document.createElement('div');
-    difficulty2.className = 'innerDifficultyDiv';
-    document.getElementsByClassName('difficultyDiv')[i].appendChild(difficulty2);
-
-    var word = document.createElement('p');
-    word.className = 'difficultyWord';
-    word.innerHTML = 'Difficulty: ';
-    document.getElementsByClassName('innerDifficultyDiv')[i].appendChild(word);
-
-    var num = document.createElement('p');
-    num.className = 'difficultyDisplay2';
-    num.innerHTML = detailedSubpages[i].difficulty + '/10';
-    document.getElementsByClassName('innerDifficultyDiv')[i].appendChild(num);
-}
-
-for (var i = 0; i < document.getElementsByClassName('difficultyDisplay2').length; i++){
-    if(detailedSubpages[i].difficulty <= 4){
-        color = '#0acf06';
-    }else if (detailedSubpages[i].difficulty > 4 && detailedSubpages[i].difficulty <= 6){
-        color = '#42aaf5';
-    }else if (detailedSubpages[i].difficulty > 6 && detailedSubpages[i].difficulty <= 7.5){
-        color = '#e89a2c';
-    }else{
-        color = '#f05d35';
-    }
-    document.getElementsByClassName('difficultyDisplay2')[i].style.background = 'linear-gradient(to right, ' + color + ' 0%, ' + color + ' ' + detailedSubpages[i].difficulty*10 + '%, lightgrey ' + detailedSubpages[i].difficulty*10 +'%, lightgrey 100%)';
-}
+    createSubPage(4, [3]);
 </script>
-
-
 </html>
