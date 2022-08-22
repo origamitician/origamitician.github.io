@@ -63,6 +63,10 @@ html{
     margin-bottom: auto;
 }
 
+#link{
+    color: orange;
+}
+
 @media only screen and (orientation: portrait){
     body{
         width: 220%;

@@ -111,17 +111,9 @@ function createSubPage(number, list){
     //instructions
 
     var pdf = document.createElement('p');
-    pdf.innerHTML = '⚠️ Warning: Steps with an asterisk (*) are tricky! The download link is below the instructions. Please also see my ';
+    pdf.innerHTML = '⚠️ Warning: Steps with an asterisk (*) are tricky! The download link is below the instructions. (These diagrams were created by me using Inkscape.)';
     pdf.className = 'pdftitle';
     document.getElementById('between').appendChild(pdf);
-
-    var download2 = document.createElement('a');
-    download2.className = 'downloadLink';
-    download2.setAttribute('href', 'https://origamitician.github.io/usagepolicy.html');
-    download2.setAttribute('target', '_blank');
-    var inner = document.createTextNode('usage policy (Opens in new window).');
-    download2.appendChild(inner);
-    document.getElementsByClassName('pdftitle')[0].appendChild(download2);
 
     var instructions = document.createElement('img');
     instructions.id = 'instructionImage';

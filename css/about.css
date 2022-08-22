@@ -1,0 +1,13 @@
+#title{
+    font-size: 300%;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subtitle{
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.5;
+    font-size: 155%;
+}
